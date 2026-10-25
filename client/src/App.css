@@ -1,0 +1,313 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6fb;
+  color: #26324a;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.app {
+  width: min(850px, 92%);
+  margin: 35px auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.logo {
+  background: #6258d9;
+  color: white;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+}
+
+.header h1 {
+  margin: 0 0 7px;
+  font-size: 28px;
+}
+
+.header p,
+.task-info p {
+  color: #778198;
+  margin: 0;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.summary-card,
+.panel,
+.task-section {
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 4px 18px #26324a0a;
+}
+
+.summary-card span,
+.summary-card strong {
+  display: block;
+}
+
+.summary-card span {
+  color: #778198;
+  font-size: 14px;
+}
+
+.summary-card strong {
+  margin-top: 10px;
+  font-size: 27px;
+  color: #6258d9;
+}
+
+h2 {
+  margin: 0 0 20px;
+  font-size: 20px;
+}
+
+form label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 15px 0 7px;
+}
+
+form input,
+form textarea,
+form select,
+.task-heading select {
+  width: 100%;
+  border: 1px solid #dfe3ed;
+  border-radius: 8px;
+  padding: 11px;
+  background: white;
+  color: #26324a;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  outline: 2px solid #c7c2ff;
+  border-color: #6258d9;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.add-button {
+  width: 100%;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  background: #6258d9;
+  color: white;
+  padding: 13px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-button:hover {
+  background: #5045c5;
+}
+
+.task-section {
+  margin-top: 22px;
+}
+
+.task-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.task-heading h2 {
+  margin-bottom: 0;
+}
+
+.task-heading select {
+  width: auto;
+}
+
+.empty {
+  text-align: center;
+  padding: 40px 10px;
+  color: #778198;
+}
+
+.empty-icon {
+  margin: auto;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #eeecff;
+  color: #6258d9;
+  font-size: 25px;
+}
+
+.empty h3 {
+  color: #26324a;
+  margin-bottom: 8px;
+}
+
+.task-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 17px 0;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.task-card > input {
+  margin-top: 5px;
+  accent-color: #6258d9;
+  width: 17px;
+  height: 17px;
+}
+
+.task-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.task-info h3 {
+  margin: 0 0 7px;
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+
+.task-info p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.done {
+  text-decoration: line-through;
+  color: #9299a9;
+}
+
+.task-meta,
+.task-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.task-meta {
+  color: #778198;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.priority {
+  padding: 4px 9px;
+  border-radius: 20px;
+}
+
+.priority.high {
+  background: #ffe7e7;
+  color: #c24141;
+}
+
+.priority.medium {
+  background: #fff2d9;
+  color: #956000;
+}
+
+.priority.low {
+  background: #dff7e9;
+  color: #237847;
+}
+
+.task-actions button {
+  border: none;
+  border-radius: 6px;
+  padding: 7px 10px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background: #eeecff;
+  color: #5045c5;
+}
+
+.delete-button {
+  background: #ffe7e7;
+  color: #c24141;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 5px;
+  color: #9299a9;
+  font-size: 13px;
+}
+
+@media (max-width: 560px) {
+  .app {
+    margin: 22px auto;
+  }
+
+  .summary {
+    gap: 8px;
+  }
+
+  .summary-card {
+    padding: 14px 10px;
+  }
+
+  .summary-card span {
+    font-size: 12px;
+  }
+
+  .summary-card strong {
+    font-size: 22px;
+  }
+
+  .panel,
+  .task-section {
+    padding: 16px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .task-card {
+    flex-wrap: wrap;
+  }
+
+  .task-actions {
+    margin-left: 30px;
+  }
+}
